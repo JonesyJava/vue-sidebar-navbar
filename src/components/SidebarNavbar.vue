@@ -8,6 +8,22 @@
       <span v-else>Vue Sidebar</span>
     </h1>
 
+    <SidebarLink to="/">
+      <i class="fa fa-home" aria-hidden="true"></i> Home
+    </SidebarLink>
+    <SidebarLink to="/dashboard">
+      <i class="fa fa-columns" aria-hidden="true"></i> Dashboard
+    </SidebarLink>
+    <SidebarLink to="/analytics">
+      <i class="fa fa-bar-chart" aria-hidden="true"></i>
+      Analytics
+    </SidebarLink>
+    <SidebarLink to="/Contacts">
+      <i class="fa fa-user" aria-hidden="true"></i> Contacts
+    </SidebarLink>
+    <SidebarLink to="/settings">
+      <i class="fa fa-cog" aria-hidden="true"></i> Settings
+    </SidebarLink>
     <span
       class="collapsed-icon"
       :class="{ 'rotate-180': collapsed }"
@@ -19,8 +35,11 @@
 </template>
 
 <script>
+import SidebarLink from '../components/SidebarLink.vue'
 import { collapsed, toggleSidebar, sidebarWidth } from './state'
 export default {
+  props: {},
+  components: { SidebarLink },
   name: 'SidebarNavbar',
   setup() {
     return {
@@ -63,13 +82,13 @@ export default {
   position: absolute;
   bottom: 0;
   padding: 0.75em;
-
+  transform: scale(1);
   color: rgba(255, 255, 255, 0.7);
-  transition: 0.2s linear;
+  transition: 0.2s linear all;
 }
 
 .rotate-180 {
-  transform: rotate(180deg);
+  transform: scale(-1);
   transition: 0.2s linear;
 }
 </style>
