@@ -5,22 +5,20 @@
         <div>V</div>
         <div>S</div>
       </span>
-      <span v-else
-        >Vue <i class="fa fa-magic" aria-hidden="true" /> Sidebar</span
-      >
+      <span v-else>Vue Sidebar</span>
     </h1>
 
-    <SidebarLink to="/" icon="fa fa-home" class="p-1"> Home </SidebarLink>
-    <SidebarLink to="/dashboard" icon="fa fa-columns" class="p-1">
+    <SidebarLink to="/" icon="fa fa-home" class="pad-class"> Home </SidebarLink>
+    <SidebarLink to="/dashboard" icon="fa fa-columns" class="pad-class">
       Dashboard
     </SidebarLink>
-    <SidebarLink to="/analytics" icon="fa fa-bar-chart" class="p-1">
+    <SidebarLink to="/analytics" icon="fa fa-bar-chart" class="pad-class">
       Analytics
     </SidebarLink>
-    <SidebarLink to="/Contacts" icon="fa fa-user" class="p-1">
+    <SidebarLink to="/Contacts" icon="fa fa-user" class="pad-class">
       Contacts
     </SidebarLink>
-    <SidebarLink to="/settings" icon="fa fa-cog" class="p-1">
+    <SidebarLink to="/settings" icon="fa fa-cog" class="pad-class">
       Settings
     </SidebarLink>
     <span
@@ -28,7 +26,7 @@
       :class="{ 'rotate-180': collapsed }"
       @click="toggleSidebar"
     >
-      <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+      <i class="fa fa-angle-double-left fa-lg" aria-hidden="true"></i>
     </span>
   </div>
 </template>
@@ -52,22 +50,26 @@ export default {
 
 <style>
 :root {
-  --sidebar-bg-color: #2f855a;
+  /* --sidebar-bg-color: #2f855a; */
   --sidebar-item-hover: #38a169;
   --sidebar-item-active: #276749;
 }
 </style>
 
 <style scoped>
+.pad-class {
+  padding-right: 21px;
+}
 .sidebar {
   color: rgb(255, 255, 255);
-  background-color: var(--sidebar-bg-color);
+  background: linear-gradient(0.25turn, #212121, #066d20, #212121);
 
   float: right;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
+  margin-right: 10px;
   bottom: 0;
   padding: 0.5em;
 
