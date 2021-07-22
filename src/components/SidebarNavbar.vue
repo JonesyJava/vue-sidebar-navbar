@@ -8,22 +8,13 @@
       <span v-else>Vue Sidebar</span>
     </h1>
 
-    <SidebarLink to="/">
-      <i class="fa fa-home" aria-hidden="true"></i> Home
-    </SidebarLink>
-    <SidebarLink to="/dashboard">
-      <i class="fa fa-columns" aria-hidden="true"></i> Dashboard
-    </SidebarLink>
-    <SidebarLink to="/analytics">
-      <i class="fa fa-bar-chart" aria-hidden="true"></i>
+    <SidebarLink to="/" icon="fa fa-home"> Home </SidebarLink>
+    <SidebarLink to="/dashboard" icon="fa fa-columns"> Dashboard </SidebarLink>
+    <SidebarLink to="/analytics" icon="fa fa-bar-chart">
       Analytics
     </SidebarLink>
-    <SidebarLink to="/Contacts">
-      <i class="fa fa-user" aria-hidden="true"></i> Contacts
-    </SidebarLink>
-    <SidebarLink to="/settings">
-      <i class="fa fa-cog" aria-hidden="true"></i> Settings
-    </SidebarLink>
+    <SidebarLink to="/Contacts" icon="fa fa-user"> Contacts </SidebarLink>
+    <SidebarLink to="/settings" icon="fa fa-cog"> Settings </SidebarLink>
     <span
       class="collapsed-icon"
       :class="{ 'rotate-180': collapsed }"
