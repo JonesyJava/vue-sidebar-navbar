@@ -5,16 +5,24 @@
         <div>V</div>
         <div>S</div>
       </span>
-      <span v-else>Vue Sidebar</span>
+      <span v-else
+        >Vue <i class="fa fa-magic" aria-hidden="true" /> Sidebar</span
+      >
     </h1>
 
-    <SidebarLink to="/" icon="fa fa-home"> Home </SidebarLink>
-    <SidebarLink to="/dashboard" icon="fa fa-columns"> Dashboard </SidebarLink>
-    <SidebarLink to="/analytics" icon="fa fa-bar-chart">
+    <SidebarLink to="/" icon="fa fa-home" class="p-1"> Home </SidebarLink>
+    <SidebarLink to="/dashboard" icon="fa fa-columns" class="p-1">
+      Dashboard
+    </SidebarLink>
+    <SidebarLink to="/analytics" icon="fa fa-bar-chart" class="p-1">
       Analytics
     </SidebarLink>
-    <SidebarLink to="/Contacts" icon="fa fa-user"> Contacts </SidebarLink>
-    <SidebarLink to="/settings" icon="fa fa-cog"> Settings </SidebarLink>
+    <SidebarLink to="/Contacts" icon="fa fa-user" class="p-1">
+      Contacts
+    </SidebarLink>
+    <SidebarLink to="/settings" icon="fa fa-cog" class="p-1">
+      Settings
+    </SidebarLink>
     <span
       class="collapsed-icon"
       :class="{ 'rotate-180': collapsed }"
@@ -52,10 +60,10 @@ export default {
 
 <style scoped>
 .sidebar {
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: var(--sidebar-bg-color);
 
-  float: left;
+  float: right;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -80,6 +88,6 @@ export default {
 
 .rotate-180 {
   transform: scale(-1);
-  transition: 0.2s linear;
+  transition: 0.5s linear;
 }
 </style>
